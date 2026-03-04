@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⛓️ MENS CLUB - SNOW KORAL 🔥</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* ثيم رجالي قوي */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #e0e0e0;
+            font-family: 'Impact', 'Arial Black', 'Segoe UI', sans-serif;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* تأثير دخان */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><circle cx="20" cy="20" r="30" fill="white" opacity="0.03"/><circle cx="80" cy="80" r="40" fill="white" opacity="0.03"/></svg>');
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* شاشة الدخول - نسخة أقوى */
+        .entry-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.98);
+            backdrop-filter: blur(15px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid #ff4444;
+        }
+
+        .entry-card {
+            background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
+            border: 4px solid #ff4444;
+            border-radius: 30px;
+            padding: 3rem;
+            max-width: 450px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 0 100px rgba(255,68,68,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .entry-card::before {
+            content: '⛓️';
+            position: absolute;
+            font-size: 10rem;
+            opacity: 0.1;
+            top: -20px;
+            right: -20px;
+            transform: rotate(20deg);
+        }
+
+        .entry-icon {
+            font-size: 6rem;
+            margin-bottom: 1rem;
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            75% { transform: rotate(-10deg); }
+        }
+
+        .entry-title {
+            font-size: 3.5rem;
+            color: #ff4444;
+            text-shadow: 0 0 20px #ff0000;
+            margin-bottom: 0.5rem;
+            letter-spacing: 5px;
+        }
+
+        .entry-subtitle {
+            color: #888;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .warning-text {
+            background: rgba(255,68,68,0.1);
+            border: 2px solid #ff4444;
+            border-radius: 15px;
+            padding: 1.2rem;
+            color: #ff4444;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .password-input {
+            width: 100%;
+            padding: 1.3rem;
+            background: #222;
+            border: 3px solid #ff4444;
+            border-radius: 60px;
+            color: white;
+            font-size: 1.5rem;
+            text-align: center;
+            letter-spacing: 5px;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .enter-btn {
+            width: 100%;
+            padding: 1.3rem;
+            background: linear-gradient(45deg, #ff4444, #ff0000);
+            border: none;
+            border-radius: 60px;
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .enter-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 60px #ff0000;
+        }
+
+        /* شعار رجالي */
+        .men-logo {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: #ff4444;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 40px;
+            font-weight: bold;
+            z-index: 1000;
+            box-shadow: 0 0 30px #ff4444;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* المحتوى الرجالي */
+        .men-container {
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* بطاقات قوية */
+        .power-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .power-card {
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            border: 3px solid #ff4444;
+            border-radius: 40px;
+            padding: 2.5rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .power-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(255,68,68,0.4);
+            border-color: #ff8888;
+        }
+
+        .power-card::after {
+            content: '⚡';
+            position: absolute;
+            font-size: 8rem;
+            opacity: 0.1;
+            bottom: -20px;
+            left: -20px;
+            transform: rotate(-15deg);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #ff4444;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .card-icon {
+            font-size: 5rem;
+            text-align: center;
+            margin: 1rem 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .card-title {
+            font-size: 2.2rem;
+            color: #ff4444;
+            text-align: center;
+            margin: 1rem 0;
+            text-transform: uppercase;
+        }
+
+        .card-desc {
+            color: #aaa;
+            text-align: center;
+            margin: 1rem 0;
+            line-height: 1.6;
+        }
+
+        .card-price {
+            text-align: center;
+            font-size: 2rem;
+            color: gold;
+            margin: 1.5rem 0;
+        }
+
+        .action-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: transparent;
+            border: 3px solid #ff4444;
+            border-radius: 50px;
+            color: #ff4444;
+            font-size: 1.3rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .action-btn:hover {
+            background: #ff4444;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* قسم الفتوش */
+        .fights-section {
+            background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+            border: 3px solid #ff4444;
+            border-radius: 50px;
+            padding: 3rem;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fights-section::before {
+            content: '⚔️⚔️⚔️';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+
+        .fights-title {
+            font-size: 3rem;
+            color: #ff4444;
+            text-align: center;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+        }
+
+        .fights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .fight-card {
+            background: #222;
+            border: 2px solid #ff4444;
+            border-radius: 30px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .fight-card:hover {
+            transform: rotate(2deg) scale(1.05);
+        }
+
+        .fight-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .fight-name {
+            color: #ff4444;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .fight-desc {
+            color: #aaa;
+            margin-bottom: 1rem;
+        }
+
+        .fight-prize {
+            color: gold;
+            font-size: 1.5rem;
+        }
+
+        /* قسم التحديات */
+        .challenge-section {
+            background: #0a0a0a;
+            border: 3px dashed #ff4444;
+            border-radius: 50px;
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .challenge-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .challenge-title {
+            font-size: 2.5rem;
+            color: #ff4444;
+            margin-bottom: 1rem;
+        }
+
+        .challenge-desc {
+            color: #aaa;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .challenge-btn {
+            background: linear-gradient(45deg, #ff4444, #ff8888);
+            border: none;
+            border-radius: 60px;
+            padding: 1.5rem 4rem;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .challenge-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 80px #ff4444;
+        }
+
+        /* رول الأسماء */
+        .roll-section {
+            background: #1a1a1a;
+            border: 3px solid gold;
+            border-radius: 50px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+
+        .roll-display {
+            background: #0a0a0a;
+            border: 3px solid gold;
+            border-radius: 30px;
+            padding: 2rem;
+            margin: 2rem 0;
+            text-align: center;
+            font-size: 3rem;
+            color: gold;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .roll-btn {
+            background: gold;
+            border: none;
+            border-radius: 60px;
+            padding: 1.5rem;
+            width: 100%;
+            color: #0a0a0a;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* خروج */
+        .exit-men {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #ff4444;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 40px;
+            cursor: pointer;
+            z-index: 10000;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <!-- شاشة الدخول -->
+    <div class="entry-screen" id="entryScreen">
+        <div class="entry-card">
+            <div class="entry-icon">⛓️</div>
+            <h1 class="entry-title">+22</h1>
+            <p class="entry-subtitle">MENS CLUB - للرجال فقط</p>
+            
+            <div class="warning-text">
+                ⚠️ دخول الرجال فقط - ممنوع دخول النساء<br>
+                محتوى خاص بالكبار +22
+            </div>
+            
+            <input type="password" class="password-input" id="passwordInput" placeholder="كلمة السر" maxlength="11">
+            
+            <button class="enter-btn" onclick="checkPassword()">دخول 🔥</button>
+        </div>
+    </div>
+
+    <!-- شعار رجالي -->
+    <div class="men-logo" id="menLogo" style="display: none;">
+        ⚡ MENS CLUB +22 ⚡
+    </div>
+
+    <!-- خروج -->
+    <div class="exit-men" id="exitBtn" style="display: none;" onclick="exitMenClub()">
+        ⛓️ خروج من النادي
+    </div>
+
+    <!-- المحتوى الرجالي -->
+    <div class="men-container" id="menContent" style="display: none;">
+        <!-- رأس الصفحة -->
+        <div style="text-align: center; margin: 3rem 0;">
+            <h1 style="font-size: 4rem; color: #ff4444; text-shadow: 0 0 30px #ff0000;">⛓️ MENS CLUB ⛓️</h1>
+            <p style="color: #aaa; font-size: 1.5rem;">للرجال فقط - طاقة ذكورية عالية</p>
+        </div>
+
+        <!-- بطاقات قوية -->
+        <div class="power-grid">
+            <div class="power-card">
+                <div class="card-badge">🔥 NEW</div>
+                <div class="card-icon">💪</div>
+                <h2 class="card-title">تحدي الرجال</h2>
+                <p class="card-desc">تحديات قوية بين الأعضاء - الفائز ياخد 500 نقطة</p>
+                <div class="card-price">🏆 500 نقطة</div>
+                <button class="action-btn">اشترك الآن</button>
+            </div>
+
+            <div class="power-card">
+                <div class="card-badge">⚡ SPECIAL</div>
+                <div class="card-icon">🏋️</div>
+                <h2 class="card-title">بطولة السيد</h2>
+                <p class="card-desc">من أقوى رجل في النقابة؟ بطولة شهرية</p>
+                <div class="card-price">👑 لقب + 1000 نقطة</div>
+                <button class="action-btn">سجل اسمك</button>
+            </div>
+
+            <div class="power-card">
+                <div class="card-badge">🎯 VIP</div>
+                <div class="card-icon">⚔️</div>
+                <h2 class="card-title">غرفة القتال</h2>
+                <p class="card-desc">نقاشات حادة وتحديات ذهنية</p>
+                <div class="card-price">🔞 300 نقطة</div>
+                <button class="action-btn">ادخل الغرفة</button>
+            </div>
+        </div>
+
+        <!-- فتوش وتحديات -->
+        <div class="fights-section">
+            <h2 class="fights-title">⚔️ ساحة الفتوش ⚔️</h2>
+            <div class="fights-grid">
+                <div class="fight-card">
+                    <div class="fight-icon">🥊</div>
+                    <div class="fight-name">ليلة القتال</div>
+                    <div class="fight-desc">3 جولات - آخر واحد واقف يفوز</div>
+                    <div class="fight-prize">1000 نقطة</div>
+                </div>
+                <div class="fight-card">
+                    <div class="fight-icon">🎲</div>
+                    <div class="fight-name">تحدي الحظ</div>
+                    <div class="fight-desc">زهر الندالة - مضاعفة النقاط</div>
+                    <div class="fight-prize">×2 أو خسارة</div>
+                </div>
+                <div class="fight-card">
+                    <div class="fight-icon">💢</div>
+                    <div class="fight-name">غرفة الغضب</div>
+                    <div class="fight-desc">تكسر فيه بعض من غير خروج</div>
+                    <div class="fight-prize">300 نقطة</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- رول الأسماء -->
+        <div class="roll-section">
+            <h2 style="color: gold; text-align: center; font-size: 2.5rem;">🎲 رول الأسماء 🎲</h2>
+            <div class="roll-display" id="rollDisplay">
+                ⚡ استعد
+            </div>
+            <button class="roll-btn" onclick="rollName()">دور 🎰</button>
+        </div>
+
+        <!-- تحديات قوية -->
+        <div class="challenge-section">
+            <div class="challenge-icon">⚡</div>
+            <h2 class="challenge-title">تحدي اليوم: 1000 نقطة</h2>
+            <p class="challenge-desc">أول واحد يوصل 1000 نقطة في الألعاب ياخد جائزة خاصة</p>
+            <button class="challenge-btn">ابدأ التحدي 💪</button>
+        </div>
+    </div>
+
+    <script>
+        const CORRECT_PASSWORD = "01204479735";
+        let attempts = 3;
+
+        function checkPassword() {
+            const input = document.getElementById('passwordInput').value;
+            
+            if (input === CORRECT_PASSWORD) {
+                // دخول ناجح
+                document.getElementById('entryScreen').style.display = 'none';
+                document.getElementById('menContent').style.display = 'block';
+                document.getElementById('menLogo').style.display = 'block';
+                document.getElementById('exitBtn').style.display = 'block';
+                
+                // احتفالية
+                alert('🔥 مرحباً بك يا رجل! استعد للهيصة');
+                createExplosion();
+            } else {
+                attempts--;
+                if (attempts <= 0) {
+                    alert('❌ انتهت المحاولات!');
+                    window.location.href = 'index.html';
+                } else {
+                    alert(`❌ كلمة سر خطأ! المحاولات المتبقية: ${attempts}`);
+                }
+            }
+        }
+
+        function exitMenClub() {
+            if (confirm('تأكد من الخروج من نادي الرجال؟')) {
+                document.getElementById('entryScreen').style.display = 'flex';
+                document.getElementById('menContent').style.display = 'none';
+                document.getElementById('menLogo').style.display = 'none';
+                document.getElementById('exitBtn').style.display = 'none';
+            }
+        }
+
+        function rollName() {
+            const names = ['فـانـتـيـاس', 'سـكـونـا', 'جان 🔥', 'زورو', 'سانجي', 'نورمان', 'ليفاي', 'إيرين'];
+            const randomName = names[Math.floor(Math.random() * names.length)];
+            document.getElementById('rollDisplay').innerHTML = `🏆 ${randomName} 🏆`;
+        }
+
+        function createExplosion() {
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const boom = document.createElement('div');
+                    boom.style.cssText = `
+                        position: fixed;
+                        left: ${Math.random() * 100}%;
+                        top: ${Math.random() * 100}%;
+                        color: #ff4444;
+                        font-size: 2rem;
+                        z-index: 10001;
+                        animation: explode 1s ease-out;
+                    `;
+                    boom.innerHTML = '💥';
+                    document.body.appendChild(boom);
+                    setTimeout(() => boom.remove(), 1000);
+                }, i * 50);
+            }
+        }
+    </script>
+</body>
+</html>
