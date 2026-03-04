@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مملكة SNOW KORAL ❄️ النقابة الرسمية</title>
+    <link rel="stylesheet" href="Css/Style.css">
+    
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="SNOW KORAL">
+    
+    <meta name="theme-color" content="#4aa3ff">
+    
+    <style>
+        /* إضافات للصفحة الرئيسية */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(74,163,255,0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #4aa3ff;
+            box-shadow: 0 10px 30px rgba(74,163,255,0.3);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            color: #a8e6ff;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .feature-desc {
+            color: #b0d9ff;
+            font-size: 0.9rem;
+        }
+        
+        .stats-banner {
+            background: linear-gradient(135deg, #4aa3ff20, #a8e6ff20);
+            border-radius: 30px;
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+            border: 2px solid #4aa3ff;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            color: #a8e6ff;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            color: #b0d9ff;
+            margin-top: 0.5rem;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 4rem 0;
+            padding: 3rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 30px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .cta-btn {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-primary {
+            background: linear-gradient(45deg, #4aa3ff, #a8e6ff);
+            color: #0a1f2e;
+        }
+        
+        .cta-secondary {
+            background: transparent;
+            border: 2px solid #4aa3ff;
+            color: #4aa3ff;
+        }
+        
+        .cta-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px #4aa3ff;
+        }
+        
+        .cta-secondary:hover {
+            background: #4aa3ff;
+            color: #0a1f2e;
+        }
+        
+        /* Service Worker و PWA */
+        .install-prompt {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #4aa3ff, #a8e6ff);
+            color: #0a1f2e;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            display: none;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 5px 30px rgba(74,163,255,0.5);
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        
+        .install-btn {
+            background: #0a1f2e;
+            color: white;
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <span class="snow-icon">❄️</span>
+                <h1>SNOW KORAL</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="ranks.html">الرتب</a></li>
+                <li><a href="members.html">الأعضاء</a></li>
+                <li><a href="bank.html">🏦 البنك</a></li>
+                <li><a href="games.html">🎮 الألعاب</a></li>
+                <li><a href="library.html">📖 المكتبة</a></li>
+                <li><a href="profile.html">👤 ملفي</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-login">تسجيل دخول</a>
+                <a href="signup.html" class="btn btn-signup">انضم الآن</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>❄️ مملكة SNOW KORAL ❄️</h2>
+            <p>نقابة الأنمي الرسمية على واتساب - حيث يلتقي عشاق الأنمي في مملكة من الثلج والإبداع</p>
+            <a href="https://chat.whatsapp.com/LqEuzfepPhu6JGaZx8Ab9u" class="whatsapp-btn" target="_blank">
+                <span>📱</span> انضم لجروب الواتساب
+            </a>
+        </section>
+
+        <!-- قسم المميزات الجديدة (كل الأنظمة اللي عملناها) -->
+        <section>
+            <h2 class="section-title">✨ أنظمة المملكة</h2>
+            <div class="features-grid">
+                <a href="bank.html" style="text-decoration: none;">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏦</div>
+                        <h3 class="feature-title">البنك</h3>
+                        <p class="feature-desc">نظام نقاط متكامل، إيداع، سحب، تحويل، وتسليف</p>
+                    </div>
+                </a>
+                <a href="games.html" style="text-decoration: none;">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3 class="feature-title">الألعاب</h3>
+                        <p class="feature-desc">ألعاب تفاعلية، تحديات يومية، وجوائز تصل لـ 500 نقطة</p>
+                    </div>
+                </a>
+                <a href="attendance.html" style="text-decoration: none;">
+                    <div class="feature-card">
+                        <div class="feature-icon">📅</div>
+                        <h3 class="feature-title">الحضور اليومي</h3>
+                        <p class="feature-desc">سجل حضورك يومياً واكسب نقاط إضافية</p>
+                    </div>
+                </a>
+                <a href="achievements.html" style="text-decoration: none;">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3 class="feature-title">الإنجازات</h3>
+                        <p class="feature-desc">12 إنجاز وشارات خاصة تفتحها</p>
+                    </div>
+                </a>
+                <a href="profile.html" style="text-decoration: none;">
+                    <div class="feature-card">
+                        <div class="feature-icon">👤</div>
+                        <h3 class="feature-title">الملف الشخصي</h3>
+                        <p class="feature-desc">خصص ملفك بالثيمات والألوان</p>
+                    </div>
+                </a>
+                <a href="friends.html" style="text-decoration: none;">
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3 class="feature-title">الأصدقاء</h3>
+                        <p class="feature-desc">أضف أصدقاء وأرسل هدايا</p>
+                    </div>
+                </a>
+                <a href="chat.html" style="text-decoration: none;">
+                    <div class="feature-card">
+                        <div class="feature-icon">💬</div>
+                        <h3 class="feature-title">الشات</h3>
+                        <p class="feature-desc">محادثات خاصة مع الأعضاء</p>
+                    </div>
+                </a>
+                <a href="library.html" style="text-decoration: none;">
+                    <div class="feature-card">
+                        <div class="feature-icon">📖</div>
+                        <h3 class="feature-title">المكتبة</h3>
+                        <p class="feature-desc">أكثر من 200 أنمي مع تقييمات</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- إحصائيات سريعة -->
+        <div class="stats-banner">
+            <h2 style="color: #a8e6ff;">📊 المملكة في أرقام</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">٥٠+</div>
+                    <div class="stat-label">عضو</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">٢٢</div>
+                    <div class="stat-label">رتبة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">١٠٠٠+</div>
+                    <div class="stat-label">نقطة متداولة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">١٢</div>
+                    <div class="stat-label">إنجاز</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- الرتب العليا -->
+        <section class="ranks-section">
+            <h2 class="section-title">الرتب العليا للمملكة</h2>
+            <div class="ranks-grid">
+                <div class="rank-card imperial-rank">
+                    <div class="rank-icon">👑⛓️</div>
+                    <h3 class="rank-title">الامبراطور ⛓️</h3>
+                    <div class="rank-member">فـانـتـيـاس 🌹🌑</div>
+                </div>
+                <div class="rank-card imperial-rank">
+                    <div class="rank-icon">👥⛄</div>
+                    <h3 class="rank-title">نائب الامبراطور ⛄</h3>
+                    <div class="rank-member">سـكـونـا + هـيـنـاتـا</div>
+                </div>
+                <div class="rank-card royal-rank">
+                    <div class="rank-icon">📜🌹</div>
+                    <h3 class="rank-title">المستشار 🌹</h3>
+                    <div class="rank-member">جان 🔥</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- دعوة للتطبيق -->
+        <div class="install-prompt" id="installPrompt">
+            <span>📱</span>
+            <span>حمّل تطبيق SNOW KORAL</span>
+            <button class="install-btn" id="installBtn">تثبيت</button>
+            <span style="cursor: pointer;" onclick="document.getElementById('installPrompt').style.display='none'">✕</span>
+        </div>
+
+        <!-- قسم دعوة للانضمام -->
+        <section class="cta-section">
+            <h2 style="color: #a8e6ff;">🚀 انضم إلينا الآن</h2>
+            <p style="color: #b0d9ff; font-size: 1.2rem; margin: 1rem 0;">
+                وابدأ رحلتك في مملكة SNOW KORAL مع أكثر من ٥٠ عضو
+            </p>
+            <div class="cta-buttons">
+                <a href="signup.html" class="cta-btn cta-primary">إنشاء حساب جديد</a>
+                <a href="login.html" class="cta-btn cta-secondary">تسجيل دخول</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>❄️ SNOW KORAL</h3>
+                <p>نقابة الأنمي الرسمية - مملكة الثلج</p>
+                <p>عدد الأعضاء: ٥٠ عضو</p>
+                <p>للتواصل: 01204479735</p>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <a href="ranks.html">الرتب</a>
+                <a href="members.html">الأعضاء</a>
+                <a href="bank.html">🏦 البنك</a>
+                <a href="games.html">🎮 الألعاب</a>
+                <a href="library.html">📖 المكتبة</a>
+                <a href="events.html">الفعاليات</a>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <a href="https://chat.whatsapp.com/LqEuzfepPhu6JGaZx8Ab9u" target="_blank">جروب الواتساب</a>
+                <a href="contact.html">📞 اتصل بنا</a>
+                <div class="social-links">
+                    <a href="#">📱</a>
+                    <a href="#">💬</a>
+                    <a href="#">📧</a>
+                </div>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem; color: #6b8ca6;">
+            © 2026 مملكة SNOW KORAL - جميع الحقوق محفوظة
+            <br>
+            <small>📱 حمّل التطبيق من المتصفح</small>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('✅ Service Worker registered'))
+                    .catch(err => console.log('❌ Service Worker error:', err));
+            });
+        }
+        
+        // PWA Install Prompt
+        let deferredPrompt;
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            
+            // إظهار الـ prompt
+            document.getElementById('installPrompt').style.display = 'flex';
+        });
+        
+        document.getElementById('installBtn').addEventListener('click', async () => {
+            if (!deferredPrompt) return;
+            
+            deferredPrompt.prompt();
+            const { outcome } = await deferredPrompt.userChoice;
+            
+            if (outcome === 'accepted') {
+                console.log('✅ User accepted installation');
+            }
+            
+            deferredPrompt = null;
+            document.getElementById('installPrompt').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
