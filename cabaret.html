@@ -6,7 +6,7 @@
     <title>⛓️ MENS CLUB - SNOW KORAL 🔥</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* ثيم رجالي قوي */
+        /* ====== تصميم خاص بالكباريه ====== */
         * {
             margin: 0;
             padding: 0;
@@ -34,7 +34,7 @@
             z-index: -1;
         }
 
-        /* شاشة الدخول - نسخة أقوى */
+        /* ====== شاشة الدخول ====== */
         .entry-screen {
             position: fixed;
             top: 0;
@@ -144,7 +144,24 @@
             box-shadow: 0 0 60px #ff0000;
         }
 
-        /* شعار رجالي */
+        .error-message {
+            color: #ff4444;
+            margin: 1rem 0;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+            animation: shake 0.5s ease;
+        }
+
+        .attempts-counter {
+            color: #ffaa00;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* ====== شعار النادي ====== */
         .men-logo {
             position: fixed;
             top: 80px;
@@ -164,14 +181,29 @@
             50% { transform: scale(1.1); }
         }
 
-        /* المحتوى الرجالي */
+        /* ====== زر الخروج ====== */
+        .exit-men {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: #ff4444;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 40px;
+            cursor: pointer;
+            z-index: 10000;
+            font-weight: bold;
+            border: 2px solid white;
+        }
+
+        /* ====== المحتوى الرئيسي ====== */
         .men-container {
             max-width: 1400px;
             margin: 2rem auto;
             padding: 0 1rem;
         }
 
-        /* بطاقات قوية */
+        /* ====== البطاقات القوية ====== */
         .power-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -272,7 +304,7 @@
             transform: scale(1.05);
         }
 
-        /* قسم الفتوش */
+        /* ====== ساحة الفتوش ====== */
         .fights-section {
             background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
             border: 3px solid #ff4444;
@@ -341,7 +373,7 @@
             font-size: 1.5rem;
         }
 
-        /* قسم التحديات */
+        /* ====== تحديات قوية ====== */
         .challenge-section {
             background: #0a0a0a;
             border: 3px dashed #ff4444;
@@ -391,7 +423,144 @@
             box-shadow: 0 0 80px #ff4444;
         }
 
-        /* رول الأسماء */
+        /* ====== قسم الفيديوهات الحصرية ====== */
+        .videos-section {
+            background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+            border: 3px solid #ff4444;
+            border-radius: 50px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+
+        .videos-title {
+            font-size: 2.5rem;
+            color: #ff4444;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .video-card {
+            background: #222;
+            border: 2px solid #ff4444;
+            border-radius: 30px;
+            padding: 1rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255,68,68,0.4);
+        }
+
+        .video-thumbnail {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background: #333;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .video-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 4rem;
+            color: white;
+            text-shadow: 0 0 20px #ff4444;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .video-card:hover .play-icon {
+            transform: translate(-50%, -50%) scale(1.2);
+            opacity: 1;
+        }
+
+        .video-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .video-title {
+            color: #ff4444;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-desc {
+            color: #aaa;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #333;
+            padding-top: 1rem;
+        }
+
+        /* روابط مباشرة */
+        .direct-links {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: #1a1a1a;
+            border-radius: 30px;
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .direct-link {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #222;
+            border: 2px solid #ff4444;
+            border-radius: 30px;
+            color: #ff4444;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .direct-link:hover {
+            background: #ff4444;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        /* ====== رول الأسماء ====== */
         .roll-section {
             background: #1a1a1a;
             border: 3px solid gold;
@@ -427,19 +596,69 @@
             cursor: pointer;
         }
 
-        /* خروج */
-        .exit-men {
+        /* ====== نافذة عرض الفيديو ====== */
+        .video-modal {
+            display: none;
             position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background: #ff4444;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 40px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 20000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-modal.active {
+            display: flex;
+        }
+
+        .video-modal-content {
+            background: #1a1a1a;
+            border: 3px solid #ff4444;
+            border-radius: 30px;
+            padding: 2rem;
+            max-width: 900px;
+            width: 90%;
+        }
+
+        .video-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: #ff4444;
+        }
+
+        .modal-close {
+            font-size: 2rem;
             cursor: pointer;
-            z-index: 10000;
-            font-weight: bold;
-            border: 2px solid white;
+            color: #ff4444;
+        }
+
+        .modal-close:hover {
+            color: white;
+        }
+
+        /* ====== Responsive ====== */
+        @media (max-width: 768px) {
+            .entry-title {
+                font-size: 2.5rem;
+            }
+            
+            .power-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .challenge-btn {
+                font-size: 1.5rem;
+                padding: 1rem 2rem;
+            }
         }
     </style>
 </head>
@@ -452,27 +671,34 @@
             <p class="entry-subtitle">MENS CLUB - للرجال فقط</p>
             
             <div class="warning-text">
-                ⚠️ دخول الرجال فقط - ممنوع دخول النساء<br>
-                محتوى خاص بالكبار +22
+                ⚠️ دخول الرجال فقط - محتوى خاص بالكبار +22
             </div>
             
             <input type="password" class="password-input" id="passwordInput" placeholder="كلمة السر" maxlength="11">
             
+            <div class="error-message" id="errorMessage">
+                ❌ كلمة السر خطأ! حاول مرة أخرى
+            </div>
+            
             <button class="enter-btn" onclick="checkPassword()">دخول 🔥</button>
+            
+            <div class="attempts-counter" id="attemptsCounter">
+                المحاولات المتبقية: 3
+            </div>
         </div>
     </div>
 
-    <!-- شعار رجالي -->
+    <!-- شعار النادي -->
     <div class="men-logo" id="menLogo" style="display: none;">
         ⚡ MENS CLUB +22 ⚡
     </div>
 
-    <!-- خروج -->
+    <!-- زر الخروج -->
     <div class="exit-men" id="exitBtn" style="display: none;" onclick="exitMenClub()">
         ⛓️ خروج من النادي
     </div>
 
-    <!-- المحتوى الرجالي -->
+    <!-- المحتوى الرئيسي -->
     <div class="men-container" id="menContent" style="display: none;">
         <!-- رأس الصفحة -->
         <div style="text-align: center; margin: 3rem 0;">
@@ -480,7 +706,7 @@
             <p style="color: #aaa; font-size: 1.5rem;">للرجال فقط - طاقة ذكورية عالية</p>
         </div>
 
-        <!-- بطاقات قوية -->
+        <!-- البطاقات القوية -->
         <div class="power-grid">
             <div class="power-card">
                 <div class="card-badge">🔥 NEW</div>
@@ -510,7 +736,7 @@
             </div>
         </div>
 
-        <!-- فتوش وتحديات -->
+        <!-- ساحة الفتوش -->
         <div class="fights-section">
             <h2 class="fights-title">⚔️ ساحة الفتوش ⚔️</h2>
             <div class="fights-grid">
@@ -535,6 +761,80 @@
             </div>
         </div>
 
+        <!-- قسم الفيديوهات الحصرية -->
+        <div class="videos-section">
+            <h2 class="videos-title">🎬 فيديوهات حصرية للرجال</h2>
+            
+            <div class="videos-grid">
+                <!-- فيديو 1 -->
+                <div class="video-card" onclick="playVideo('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
+                    <div class="video-thumbnail">
+                        <span class="play-icon">▶️</span>
+                        <div style="width:100%; height:100%; background: linear-gradient(45deg, #ff4444, #ff8888); display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 3rem;">🎬</span>
+                        </div>
+                        <div class="video-duration">15:30</div>
+                    </div>
+                    <h3 class="video-title">مباراة الأساطير</h3>
+                    <p class="video-desc">أفضل اللقطات من مباراة الأسبوع</p>
+                    <div class="video-meta">
+                        <span>👁️ 2.5k مشاهدة</span>
+                        <span>⭐ 4.8</span>
+                    </div>
+                </div>
+
+                <!-- فيديو 2 -->
+                <div class="video-card" onclick="playVideo('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
+                    <div class="video-thumbnail">
+                        <span class="play-icon">▶️</span>
+                        <div style="width:100%; height:100%; background: linear-gradient(45deg, #ffaa00, #ffdd00); display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 3rem;">⚔️</span>
+                        </div>
+                        <div class="video-duration">22:45</div>
+                    </div>
+                    <h3 class="video-title">تحدي الأبطال</h3>
+                    <p class="video-desc">تحدي قوي بين أعضاء النقابة</p>
+                    <div class="video-meta">
+                        <span>👁️ 1.8k مشاهدة</span>
+                        <span>⭐ 4.9</span>
+                    </div>
+                </div>
+
+                <!-- فيديو 3 -->
+                <div class="video-card" onclick="playVideo('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">
+                    <div class="video-thumbnail">
+                        <span class="play-icon">▶️</span>
+                        <div style="width:100%; height:100%; background: linear-gradient(45deg, #00cc66, #00ff99); display: flex; align-items: center; justify-content: center;">
+                            <span style="font-size: 3rem;">🥊</span>
+                        </div>
+                        <div class="video-duration">18:20</div>
+                    </div>
+                    <h3 class="video-title">ليلة القتال</h3>
+                    <p class="video-desc">أقوى نزالات الشهر</p>
+                    <div class="video-meta">
+                        <span>👁️ 3.2k مشاهدة</span>
+                        <span>⭐ 5.0</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- روابط مباشرة -->
+            <div class="direct-links">
+                <h3 style="color: #ff4444; margin-bottom: 1rem;">🔗 روابط مباشرة</h3>
+                <div class="links-grid">
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="direct-link">
+                        <span>📺</span> فيديو 1: مباراة الأساطير
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="direct-link">
+                        <span>📺</span> فيديو 2: تحدي الأبطال
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="direct-link">
+                        <span>📺</span> فيديو 3: ليلة القتال
+                    </a>
+                </div>
+            </div>
+        </div>
+
         <!-- رول الأسماء -->
         <div class="roll-section">
             <h2 style="color: gold; text-align: center; font-size: 2.5rem;">🎲 رول الأسماء 🎲</h2>
@@ -549,7 +849,20 @@
             <div class="challenge-icon">⚡</div>
             <h2 class="challenge-title">تحدي اليوم: 1000 نقطة</h2>
             <p class="challenge-desc">أول واحد يوصل 1000 نقطة في الألعاب ياخد جائزة خاصة</p>
-            <button class="challenge-btn">ابدأ التحدي 💪</button>
+            <button class="challenge-btn" onclick="startChallenge()">ابدأ التحدي 💪</button>
+        </div>
+    </div>
+
+    <!-- نافذة عرض الفيديو -->
+    <div class="video-modal" id="videoModal" onclick="closeVideoModal()">
+        <div class="video-modal-content" onclick="event.stopPropagation()">
+            <div class="video-modal-header">
+                <h3 id="videoModalTitle">عرض الفيديو</h3>
+                <span class="modal-close" onclick="closeVideoModal()">&times;</span>
+            </div>
+            <div class="video-modal-body">
+                <iframe id="videoIframe" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 
@@ -559,8 +872,12 @@
 
         function checkPassword() {
             const input = document.getElementById('passwordInput').value;
+            const errorMsg = document.getElementById('errorMessage');
+            const attemptsSpan = document.getElementById('attemptsCounter');
             
-            if (input === CORRECT_PASSWORD) {
+            const cleanInput = input.trim();
+            
+            if (cleanInput === CORRECT_PASSWORD) {
                 // دخول ناجح
                 document.getElementById('entryScreen').style.display = 'none';
                 document.getElementById('menContent').style.display = 'block';
@@ -568,16 +885,31 @@
                 document.getElementById('exitBtn').style.display = 'block';
                 
                 // احتفالية
-                alert('🔥 مرحباً بك يا رجل! استعد للهيصة');
                 createExplosion();
+                showSuccessMessage();
             } else {
+                // كلمة سر خطأ
                 attempts--;
-                if (attempts <= 0) {
-                    alert('❌ انتهت المحاولات!');
-                    window.location.href = 'index.html';
+                
+                if (attempts > 0) {
+                    errorMsg.classList.add('show');
+                    attemptsSpan.innerHTML = `المحاولات المتبقية: ${attempts}`;
+                    
+                    // هز حقل الإدخال
+                    document.getElementById('passwordInput').style.animation = 'shake 0.5s ease';
+                    setTimeout(() => {
+                        document.getElementById('passwordInput').style.animation = '';
+                    }, 500);
                 } else {
-                    alert(`❌ كلمة سر خطأ! المحاولات المتبقية: ${attempts}`);
+                    errorMsg.innerHTML = '❌ انتهت المحاولات! سيتم إعادة التوجيه';
+                    errorMsg.classList.add('show');
+                    
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 2000);
                 }
+                
+                document.getElementById('passwordInput').value = '';
             }
         }
 
@@ -594,6 +926,32 @@
             const names = ['فـانـتـيـاس', 'سـكـونـا', 'جان 🔥', 'زورو', 'سانجي', 'نورمان', 'ليفاي', 'إيرين'];
             const randomName = names[Math.floor(Math.random() * names.length)];
             document.getElementById('rollDisplay').innerHTML = `🏆 ${randomName} 🏆`;
+        }
+
+        function startChallenge() {
+            alert('🔥 التحدي بدأ! أول واحد يوصل 1000 نقطة ياخد الجائزة');
+        }
+
+        function playVideo(url) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoIframe');
+            
+            // تحويل رابط YouTube إلى رابط embed
+            let embedUrl = url;
+            if (url.includes('youtube.com/watch')) {
+                const videoId = url.split('v=')[1];
+                embedUrl = `https://www.youtube.com/embed/${videoId}`;
+            }
+            
+            iframe.src = embedUrl;
+            modal.classList.add('active');
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoIframe');
+            iframe.src = '';
+            modal.classList.remove('active');
         }
 
         function createExplosion() {
@@ -615,6 +973,49 @@
                 }, i * 50);
             }
         }
+
+        function showSuccessMessage() {
+            const msg = document.createElement('div');
+            msg.style.cssText = `
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: #ff4444;
+                color: white;
+                padding: 2rem 4rem;
+                border-radius: 50px;
+                font-size: 2rem;
+                font-weight: bold;
+                z-index: 10002;
+                animation: popIn 0.5s ease;
+            `;
+            msg.textContent = '🔥 مرحباً بك في نادي الرجال!';
+            document.body.appendChild(msg);
+            
+            setTimeout(() => {
+                msg.style.animation = 'fadeOut 0.5s ease';
+                setTimeout(() => msg.remove(), 500);
+            }, 3000);
+        }
+
+        // إضافة animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes explode {
+                0% { transform: scale(0); opacity: 1; }
+                100% { transform: scale(3); opacity: 0; }
+            }
+            @keyframes popIn {
+                0% { transform: translate(-50%, -50%) scale(0); }
+                80% { transform: translate(-50%, -50%) scale(1.2); }
+                100% { transform: translate(-50%, -50%) scale(1); }
+            }
+            @keyframes fadeOut {
+                to { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
